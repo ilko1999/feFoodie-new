@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RegisterSVG({ size }: { size: number }) {
+function RegisterSVG({ className }: { className: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,7 @@ function RegisterSVG({ size }: { size: number }) {
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      className={`w-${size} h-${size}`}
+      className={className}
     >
       <path
         stroke-linecap="round"

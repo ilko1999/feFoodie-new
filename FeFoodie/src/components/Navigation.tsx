@@ -7,7 +7,7 @@ function Navigation() {
   return (
     <nav className="mx-auto flex max-w-3xl items-center justify-between p-4">
       <a
-        className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-2xl bg-gray-100 "
+        className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-3xl "
         href="/"
       >
         🧁
@@ -16,13 +16,13 @@ function Navigation() {
       <ul className="flex items-center gap-2 text-sm font-medium text-white">
         <li className="px-2">
           <Button title={'login'} hrefLink={'login'}>
-            <LoginSVG size={4} />
+            <LoginSVG className={'w-4 h-4'} />
           </Button>
         </li>
 
         <li>
           <Button title={'register'} hrefLink={'register'}>
-            <RegisterSVG size={4} />
+            <RegisterSVG className={'w-4 h-4'} />
           </Button>
         </li>
       </ul>

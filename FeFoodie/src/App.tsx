@@ -1,12 +1,31 @@
 import HomeScreen from './screens/HomeScreen';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-dom';
+import { Router, Route, Outlet, ReactLocation } from '@tanstack/react-location';
+import Login from './authentication/Login';
+import Register from './authentication/Register';
+
+const routes: Route[] = [
+  {
+    path: '/',
+    element: <HomeScreen />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/register',
+    element: <Register />,
+  },
+];
+
+const location = new ReactLocation();
 
 function App() {
   return (
-    <div>
-      <HomeScreen />
-    </div>
+    <Router routes={routes} location={location}>
+      <Outlet />
+    </Router>
   );
 }
 
